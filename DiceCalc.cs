@@ -28,6 +28,8 @@ namespace DiceSimulation
                 results[i] = rnd.Next(1, 7) + rnd.Next(1, 7);
                 countNumbers[results[i]]++;
             }
+
+            //Convert the count of each number to a percentage
             for (int i = 2; i < countNumbers.Length; i++)
             {
                 countNumbers[i] = (int)Math.Round((((double)countNumbers[i] / count) * 100), 0, MidpointRounding.AwayFromZero);
